@@ -125,17 +125,7 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
              $('#txt_5296250').trigger('click');
-             e.key="a";    // just enter the char you want to send 
-  e.keyCode=e.key.charCodeAt(65);
-  e.which=e.keyCode;
-  e.altKey=false;
-  e.ctrlKey=true;
-  e.shiftKey=false;
-  e.metaKey=false;
-  e.bubbles=true;
-          document.dispatchEvent(e);
-             
-             // document.getElementById("txt_5296250").value = "Nome Cognome";
+             document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
              MyFunction2();
          }
