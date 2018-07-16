@@ -127,7 +127,7 @@
          if(myEle){
 		 $('#txt_5296250').trigger('click');	
 		document.getElementById("txt_5296250").value = "Nome Cognome";
-		 $('#txt_5296250').val($(this).val() + "?");
+		 $('#txt_5296250').val($('#txt_5296250').val() + "?");
              	clearInterval(refreshIntervalId2);
              	MyFunction2();
          }
