@@ -107,7 +107,7 @@
          console.log("inside 5th funtion");
          var myEle = document.getElementsByClassName("lp_submit_button");
          if(myEle){
-             // $('.lp_submit_button').trigger('click');
+             $('.lp_submit_button').trigger('click');
              clearInterval(refreshIntervalId3);
          }
       } , 100);
@@ -121,7 +121,10 @@
          console.log("inside third funtion");
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
-             document.getElementById("txt_5296250").value = "Nome Cognome";
+             $('#txt_5296250').trigger('click');
+             var e = new Event("keydown");
+             e.key = "a";
+             // document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
              MyFunction2();
          }
