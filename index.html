@@ -122,8 +122,7 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
              $('#txt_5296250').trigger('click');
-             var e = new Event("keydown");
-             e.key = "a";
+             $("#txt_5296250").sendkeys ("A") ;
              // document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
              MyFunction2();
