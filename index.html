@@ -108,10 +108,15 @@
     
 });
    
-   $('div.test').click(function(){
-      console.log("hooray");
-      MyFunction();
-   });
+   var refreshIntervalId = setInterval(function(){
+   
+     $('div.test').click(function(){
+        console.log("hooray");
+        clearInterval(refreshIntervalId);
+        MyFunction();
+     });
+    
+   } , 10000);
    
    
   </script>
