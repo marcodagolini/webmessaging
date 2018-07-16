@@ -99,8 +99,14 @@
   
   <script>
    
+   
+   
    function MyFunction(){
-    document.getElementById('txt_5296250').innerHTML = 'Nome Cognome';
+      var refreshIntervalId2 = setInterval(function(){
+         if(document.body.contains('#txt_5296250')){
+            document.getElementById('#txt_5296250').innerHTML = 'Nome Cognome';
+         }
+      } , 100);
    }
    
 
