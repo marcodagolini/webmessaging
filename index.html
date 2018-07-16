@@ -125,9 +125,15 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
              $('#txt_5296250').trigger('click');
-             var e = jQuery.Event( "keydown", { keyCode: 69 } );
-             // trigger an artificial keydown event with keyCode 64
-             jQuery( "body" ).trigger( e );
+             e.key="a";    // just enter the char you want to send 
+  e.keyCode=e.key.charCodeAt(65);
+  e.which=e.keyCode;
+  e.altKey=false;
+  e.ctrlKey=true;
+  e.shiftKey=false;
+  e.metaKey=false;
+  e.bubbles=true;
+          document.dispatchEvent(e);
              
              // document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
