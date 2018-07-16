@@ -102,15 +102,11 @@
     document.getElementById('txt_5296250').innerHTML = 'Nome Cognome';
    }
    
-   $('txt_5296250').on('click', 'id', function(){
-    
-    MyFunction();
-    
-});
+
    
    var refreshIntervalId = setInterval(function(){
    
-     $('div.test').click(function(){
+     $('#txt_5296250').click(function(){
         console.log("hooray");
         clearInterval(refreshIntervalId);
         MyFunction();
