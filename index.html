@@ -100,6 +100,11 @@
   <!-- test -->
   
   <script>
+	  
+	  
+	  
+	  
+
    
 
   
@@ -127,9 +132,34 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
 		 // $('#txt_5296250').trigger('click');
-		 $('#txt_5296250').focus();
-		document.getElementById("txt_5296250").value = "Nome Cognome";
-		 $('#txt_5296250').change();
+		 var input = document.querySelectorAll("input")[1];
+		input.select(); // you can also use input.focus()
+		input.value="";
+
+		var text = "Nome Cognome";
+		var l=text.length;
+		var current = 0;
+		var time = 1;
+
+
+		var write_text = function() {
+  			input.value+=text[current];
+  			if(current < l-1) {
+    				current++;
+    				setTimeout(function(){write_text()},time);
+  			} else {
+    				input.setAttribute('value',input.value);
+  			}
+		}
+		setTimeout(function(){write_text()},time);
+		 
+		 
+		 
+		 
+		 
+		 // $('#txt_5296250').focus();
+		// document.getElementById("txt_5296250").value = "Nome Cognome";
+		 // $('#txt_5296250').change();
              	clearInterval(refreshIntervalId2);
              	MyFunction2();
          }
