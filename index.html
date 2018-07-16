@@ -100,6 +100,22 @@
    
    
    
+   
+  
+  function MyFunction2(){
+      console.log("inside 4th funtion");
+      var refreshIntervalId3 = setInterval(function(){
+         console.log("inside 5th funtion");
+         var myEle = document.getElementsByClassName("lp_submit_button");
+         if(myEle){
+             document.getElementsByClassName('lp_submit_button').click();
+             clearInterval(refreshIntervalId3);
+         }
+      } , 100);
+   }
+   
+   
+   
    function MyFunction(){
       console.log("inside second funtion");
       var refreshIntervalId2 = setInterval(function(){
@@ -108,6 +124,7 @@
          if(myEle){
              document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
+             MyFunction2();
          }
       } , 100);
    }
