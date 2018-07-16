@@ -109,7 +109,7 @@
          console.log("inside 5th funtion");
          var myEle = document.getElementsByClassName("lp_submit_button");
          if(myEle){
-             // $('.lp_submit_button').trigger('click');
+             $('.lp_submit_button').trigger('click');
              clearInterval(refreshIntervalId3);
          }
       } , 100);
@@ -124,12 +124,9 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
              $('#txt_5296250').trigger('click');
-		 var e = new Event('keydown');
-	e.which = e.keyCode = 69; // 32 is the keycode for the space bar
-	document.dispatchEvent(e);
-             // document.getElementById("txt_5296250").value = "Nome Cognome";
-             clearInterval(refreshIntervalId2);
-             MyFunction2();
+		document.getElementById("txt_5296250").value = "Nome Cognome";
+             	clearInterval(refreshIntervalId2);
+             	MyFunction2();
          }
       } , 100);
    }
