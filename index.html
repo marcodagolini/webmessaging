@@ -19,6 +19,8 @@
  
  
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+ <script type="text/javascript" src="http://bililite.com/inc/jquery.sendkeys.js"></script>
+ <script type="text/javascript" src="http://bililite.com/inc/bililiteRange.js"></script>
 
 
   
@@ -131,35 +133,8 @@
          console.log("inside third funtion");
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
-		 // $('#txt_5296250').trigger('click');
-		 var input = document.getElementById("txt_5296250");
-		input.select(); // you can also use input.focus()
-		input.value="";
-
-		var text = "Nome Cognome";
-		var l=text.length;
-		var current = 0;
-		var time = 1;
-
-
-		var write_text = function() {
-  			input.value+=text[current];
-  			if(current < l-1) {
-    				current++;
-    				setTimeout(function(){write_text()},time);
-  			} else {
-    				input.setAttribute('value',input.value);
-  			}
-		}
-		setTimeout(function(){write_text()},time);
-		 
-		 
-		 
-		 
-		 
-		 // $('#txt_5296250').focus();
+		$("#txt_5296250").sendkeys ("B") ;
 		// document.getElementById("txt_5296250").value = "Nome Cognome";
-		 // $('#txt_5296250').change();
              	clearInterval(refreshIntervalId2);
              	MyFunction2();
          }
