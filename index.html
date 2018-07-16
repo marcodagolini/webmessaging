@@ -124,10 +124,9 @@
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
              $('#txt_5296250').trigger('click');
-             var e = jQuery.Event("keypress");
-             e.which = 69;
-             e.keyCode = 69;
-             document.dispatchEvent(e);
+             var e = jQuery.Event( "keydown", { keyCode: 69 } );
+             // trigger an artificial keydown event with keyCode 64
+             jQuery( "body" ).trigger( e );
              
              // document.getElementById("txt_5296250").value = "Nome Cognome";
              clearInterval(refreshIntervalId2);
