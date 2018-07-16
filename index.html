@@ -126,9 +126,26 @@
          console.log("inside third funtion");
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
-		 $('#txt_5296250').trigger('click');	
-		document.getElementById("txt_5296250").value = "Nome Cognome";
-		 $('#txt_5296250').val($('#txt_5296250').val() + "?");
+		 $('#txt_5296250').trigger('click');
+		 var keyboardEvent = document.createEvent("KeyboardEvent");
+		var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
+
+
+keyboardEvent[initMethod](
+                   "keydown", // event type : keydown, keyup, keypress
+                    true, // bubbles
+                    true, // cancelable
+                    window, // viewArg: should be window
+                    false, // ctrlKeyArg
+                    false, // altKeyArg
+                    false, // shiftKeyArg
+                    false, // metaKeyArg
+                    69, // keyCodeArg : unsigned long the virtual key code, else 0
+                    0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+);
+		document.dispatchEvent(keyboardEvent);
+		// document.getElementById("txt_5296250").value = "Nome Cognome";
+
              	clearInterval(refreshIntervalId2);
              	MyFunction2();
          }
