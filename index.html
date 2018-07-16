@@ -101,11 +101,7 @@
   
   <script>
    
-   	function simulateKeyPress(character) {
-  		jQuery.event.trigger({ type : 'keypress', which : character.charCodeAt(0) });
-	}
-   
-   
+
   
   function MyFunction2(){
       console.log("inside 4th funtion");
@@ -130,9 +126,10 @@
          console.log("inside third funtion");
          var myEle = document.getElementById("txt_5296250");
          if(myEle){
-		 $('#txt_5296250').trigger('click');
-		 simulateKeyPress("a");
-		// document.getElementById("txt_5296250").value = "Nome Cognome";
+		 // $('#txt_5296250').trigger('click');
+		 $('#txt_5296250').focus();
+		document.getElementById("txt_5296250").value = "Nome Cognome";
+		 $('#txt_5296250').change();
              	clearInterval(refreshIntervalId2);
              	MyFunction2();
          }
