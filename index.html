@@ -108,9 +108,9 @@
          console.log("inside 5th funtion");
          var myEle = document.getElementsByClassName("lp_submit_button");
          if(myEle){
-		 setInterval(function(){
+		 setTimeout(function(){
 			$('.lp_submit_button').trigger('click');
-		 }, 1);
+		 }, 1000);
              
              clearInterval(refreshIntervalId3);
          }
