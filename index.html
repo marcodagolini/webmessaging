@@ -107,7 +107,10 @@
          console.log("inside 5th funtion");
          var myEle = document.getElementsByClassName("lp_submit_button");
          if(myEle){
-             // $('.lp_submit_button').trigger('click');
+             $('.lp_submit_button').trigger('click');
+          var e = new Event('keydown');
+	e.which = e.keyCode = 69; // 32 is the keycode for the space bar
+	document.dispatchEvent(e);
              clearInterval(refreshIntervalId3);
          }
       } , 100);
