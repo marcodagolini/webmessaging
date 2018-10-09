@@ -69,6 +69,7 @@
  <script>
 	 
 $(document).ready(function(){
+	 setTimeout(function(){
 	 
  var CurrentLocation = window.location.href;
  lpTag.newPage(CurrentLocation, {section: "astraair"});
@@ -87,6 +88,7 @@ $(document).ready(function(){
 	 callback(token);	
      
  };
+	 }, 1000);
 	
 });
  
