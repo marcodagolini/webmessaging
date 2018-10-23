@@ -77,6 +77,16 @@ function interactiveOrNot(data, eventInfo){
 	if(window.console && window.JSON){
 		if(data.state === "interactive"){
 			console.log("yepppaaaa");
+			lpTag.sdes = lpTag.sdes||[];
+			
+			lpTag.sdes.push(
+				{
+					"type": "ctmrinfo",
+					"info": {
+						"cstatus": "interactive"
+					}
+				}
+			);
 		}
 	}
 }
