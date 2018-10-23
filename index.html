@@ -69,11 +69,22 @@
  <script>
 	 
 function processThis(data, eventInfo){
-     if(window.console && window.JSON){
-	     console.log("********");
-            console.log(JSON.stringify(data) + " triggered by: " +  JSON.stringify(eventInfo));
-        }
-     }
+	if(window.console && window.JSON){
+		if(data.state === "interactive"){
+			console.log("yepppaaaa");
+		}
+	}
+}
+     
+
+	 
+	 
+lpTag.events.bind({
+    eventName : "state",
+    appName : "lpUnifiedWindow",
+    func: processThis,
+    triggerOnce : false
+    });
 
 	 
 $(document).ready(function(){
