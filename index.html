@@ -74,6 +74,10 @@ function clickOrNot(){
 	console.log("cliccccckkkk");
 }
 	 
+function closedOrNot(){
+	console.log("closeeeeedddddd");
+}
+	 
 function interactiveOrNot(data, eventInfo){
 	if(window.console && window.JSON){
 		if(data.state === "interactive"){
@@ -113,6 +117,15 @@ lpTag.events.bind({
     func: interactiveOrNot,
     triggerOnce : false
  });
+	 
+	 
+lpTag.events.bind({
+    eventName : "windowClosed",
+    appName : "lpUnifiedWindow",
+    func: closedOrNot,
+    triggerOnce : false
+ });
+
 
 	 
 $(document).ready(function(){
