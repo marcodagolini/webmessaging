@@ -69,23 +69,33 @@
  	
  <script>
 	 
-function processThis(data, eventInfo){
+function clickOrNot(){
+	console.log("cliccccckkkk");
+}
+	 
+function interactiveOrNot(data, eventInfo){
 	if(window.console && window.JSON){
 		if(data.state === "interactive"){
 			console.log("yepppaaaa");
 		}
 	}
 }
-     
+  
+lpTag.events.bind({
+    eventName : "OFFER_CLICK",
+    appName : "LP_OFFERS",
+    func: clickOrNot,
+    triggerOnce : false
+ });
 
 	 
 	 
 lpTag.events.bind({
     eventName : "state",
     appName : "lpUnifiedWindow",
-    func: processThis,
+    func: interactiveOrNot,
     triggerOnce : false
-    });
+ });
 
 	 
 $(document).ready(function(){
