@@ -70,6 +70,10 @@
  	
  <script>
 	 
+function offeredOrNot(){
+	console.log("offered");
+}
+	 
 function clickOrNot(){
 	console.log("cliccccckkkk");
 }
@@ -101,6 +105,14 @@ function interactiveOrNot(data, eventInfo){
 	}	
 	
 }
+	 
+	 
+lpTag.events.bind({
+    eventName : "OFFER_IMPRESSION",
+    appName : "LP_OFFERS",
+    func: offeredOrNot,
+    triggerOnce : false
+ });
   
 lpTag.events.bind({
     eventName : "OFFER_CLICK",
